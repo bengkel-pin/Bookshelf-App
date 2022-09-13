@@ -1,0 +1,372 @@
+/* Import Font*/
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+:root {
+    --primary-color: #2E2F5B;
+    --secondary-color: #505581;
+    --additional-color-1: #F4D35E;
+    --additional-color-2: #FAF0CA;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Nunito;
+    overflow: overlay;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+
+/* Title Header*/
+body > header {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: Pacifico;
+    height: 70px;
+    margin: auto;
+    text-align: center;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+main {
+    padding: 10px;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: fit-content;
+    margin: 20px auto;
+    width: 70vw;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 1px var(--secondary-color);
+    padding: 10px;
+    background-color: white;
+}
+
+/* Search Bar */
+.search-bar{
+    width: 90%;
+    margin: auto;
+}
+
+.search-icon{
+    background-image: url(../images/search-button.svg);
+    background-size: cover;
+    height: 25px;
+    width: 25px;
+    margin-left: 10px;
+    filter: invert(99%) sepia(69%) saturate(4551%) hue-rotate(315deg) brightness(109%) contrast(91%);
+}
+
+.search-bar > form {
+    width: 100%;
+    display: flex;
+    border: 3px solid var(--additional-color-1);
+    border-radius: 30px;
+    padding: 10px;
+    align-items: center;
+}
+
+#search-form > input{
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 20px;
+    border: none;
+}
+
+#search-form > input:focus{
+    outline: none;
+}
+
+/* Tombol Tambah Buku Baru */
+#book-list > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#add-book-button {
+    background-image: url(../images/addButton.svg);
+    background-size: cover;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: #0b2ca1;
+    width: 40px;
+    height: 40px;
+    filter: invert();
+}
+
+#add-book-button:hover{
+    background-color: #d1d0a4;
+}
+
+.book-list-container {
+    min-height: fit-content;
+    max-height: 540px;
+    display: flex;
+    flex-flow: row wrap;
+    overflow-y: overlay;
+    overflow-x: hidden;
+    width: 90%;
+    margin: 10px 0 25px 0;
+}
+
+.empty-book-list{
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.container > header {
+    width: 90%;
+    margin: 10px;
+}
+
+.container > header > h2 {
+    width: fit-content;
+    font-size: 32px;
+    color: var(--secondary-color);
+}
+
+.input-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    flex-basis: 33.3%;
+    max-width: 33.3%;
+    height: 180px;
+    padding: 5px;
+}
+
+.content-container {
+    margin-top: 10px;
+}
+
+.content-container > h2 {
+    height: fit-content;
+    font-size: 140%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+
+.content-container > .author {
+    font-style: italic;
+}
+
+.entire-stuff {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.entire-stuff > button {
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: var(--additional-color-2);
+    cursor: pointer;
+}
+
+.entire-stuff > button:hover{
+    background-color: var(--additional-color-1);
+}
+
+.entire-stuff > p {
+    font-size: 13.3px;
+    padding: 3.5px;
+    text-align: center;
+    background-color: #7b7a79;
+    border-radius: 10px;
+}
+/* Form Container */
+
+.form-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+.form-content {
+    background-color: var(--secondary-color);
+    margin: 10% auto;
+    padding: 0 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.form-content > header {
+    color: white;
+    text-align: center;
+    margin: 30px 0 20px 0;
+    color: var(--additional-color-2);
+    font-size: 1.5em;
+}
+
+.form-input {
+    margin: 5px auto;
+    background-color: transparent;
+    border: 2px solid var(--additional-color-2);
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    width: 90%;
+
+}
+
+.form-input:focus{
+    border: 2px solid var(--additional-color-1);
+}
+
+.form-input::placeholder{
+    color: var(--additional-color-2);
+}
+
+#form > .button > input{
+    display: block;
+    margin: 20px auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--additional-color-2);
+}
+
+#form > .button > input:hover{
+    background-color: var(--additional-color-1);
+}
+
+.close-form {
+    background-image: url(../images/close.svg);
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    float: right;
+    margin: 10px -10px;
+    filter: invert();
+}
+
+.close-form:hover{
+    background-color: #0B2CA1;
+}
+
+hr {
+    border: 2px solid var(--additional-color-1);
+    border-radius: 5px;
+    width: 90%;
+    background-color: var(--additional-color-1);
+}
+
+::-webkit-scrollbar {
+    height: 2px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--additional-color-1);
+}
+
+body::-webkit-scrollbar, .book-list-container::-webkit-scrollbar {
+    width: 5px;
+}
+
+body::-webkit-scrollbar-thumb, .book-list-container::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+}
+
+/* MEDIA QUERIES 
+--------------------------------------------------------------*/
+
+@media screen and (max-width: 540px) {
+    .wrapper {
+        flex-basis: 100%;
+        max-width: 100%;
+    } 
+}
+
+@media screen and (min-width: 540px) {
+    @media screen and (max-width: 1080px){
+        .wrapper {
+            flex-basis: 50%;
+            max-width: 50%;
+        }
+    } 
+}
+
+/* ----------------------------------------------------------- */
+
+
+/* YES OR NO 
+---------------------------------------------------------------*/
+.yes-or-no-container {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+}
+
+.yes-or-no-content {
+    background-color: var(--secondary-color);
+    margin: 15% auto;
+    padding: 10px 20px;
+    border: 1px solid #888;
+    width: 20%;
+    border-radius: 10px;
+    height: fit-content;
+}
+
+.yes-or-no-content > h2 {
+    text-align: center;
+    color: var(--additional-color-2);
+    margin: 5px;
+}
+
+.yes-or-no-content > section {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.yes-or-no-content > section > button {
+    flex-basis: 45%;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--additional-color-2);
+}
+
+.yes-or-no-content > section > button:hover {
+    background-color: var(--additional-color-1);
+}
+/* ------------------------------------------------------------ */

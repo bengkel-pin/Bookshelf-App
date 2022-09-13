@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookShelf Apps</title>
+    <link rel="stylesheet" href="./assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>BookShelf Apps</h1>
+    </header>
+
+    <main>
+        <div class="container" id="book-list">
+            <header>
+                <h2>Book List</h2>
+                <button id="add-book-button" title="Add a New Book"></button>
+            </header>
+
+            <div class="search-bar" id="search-bar">
+                <form action="#" id="search-form">
+                    <span class="search-icon" id="search-icon"></span>
+                    <input type="text"  id="search-input" placeholder="Search" autocomplete="off">
+                </form>
+            </div>
+
+            <div class="book-list-container" id="book-list-shelf">
+                <div class="empty-book-list" id="empty-book-list-shelf">
+                    <p>No Books Here</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <header>
+                <h2>Being Read</h2>
+            </header>
+            <hr>
+            <div class="book-list-container" id="being-read-shelf">
+                <div class="empty-book-list" id="empty-book-list-being">
+                    <p>No Books Here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <header>
+                <h2>Finished Reading</h2>
+            </header>
+            <hr>
+            <div class="book-list-container" id="finished-read-shelf">
+                <div class="empty-book-list" id="empty-book-list-already">
+                    <p>No Books Here</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-container" id="form-container">
+            <div class="form-content">
+                <div class="close-form" id="close-form" title="Close"></div>
+                <header>
+                    <h2>Add Book</h2>
+                </header>
+                <form action="#" id="form">
+                    <section class="input-section">
+                        <input class="form-input" type="text" autocomplete="off" required placeholder="Title" id="book-title">
+                        <input class="form-input" type="text" autocomplete="off" required placeholder="Author" id="book-author">
+                        <input class="form-input" type="number" autocomplete="off" required placeholder="Year" id="year-release">
+                    </section>
+    
+                    <section class="button">
+                        <input type="submit" value="Add">
+                    </section>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./assets/scripts/script.js"></script>
+</body>
+</html>
